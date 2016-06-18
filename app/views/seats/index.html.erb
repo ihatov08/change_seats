@@ -1,22 +1,29 @@
-<p id="notice"><%= notice %></p>
+<% if flash[:notice] %>
+<div class="alert alert-danger">
+<p><%= notice %></p>
+</div>
+<% end %>
 
-<h1>スパルタキャンプ in 八幡平 参加者一覧</h1>
 
-<table>
+<div class="seats_index">
+<h1>Sparta Camp in Hachimantai Member Lists<%= link_to 'Mix now!!', randam_path, class: "btn btn-warning" %><%= link_to 'Registration', new_seat_path, class: "btn btn-default" %></h1>
+
+<table class="table">
   <thead>
     <tr>
-      <th>名前</th>
+      <th>Name</th>
       <th colspan="3"></th>
     </tr>
   </thead>
 
   <tbody>
-    <% @seats.each do |seat| %>
+    <% @seats.each_with_index do |seat, i| %>
       <tr>
+        <td><%= "#{i + 1}" %></td>
         <td><%= seat.name %></td>
-        <td><%= link_to 'Show', seat %></td>
-        <td><%= link_to 'Edit', edit_seat_path(seat) %></td>
-        <td><%= link_to 'Destroy', seat, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Show', seat, class: "btn btn-primary" %></td>
+        <td><%= link_to 'Edit', edit_seat_path(seat), class: "btn btn-default" %></td>
+        <td><%= link_to 'Destroy', seat, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-danger" %></td>
       </tr>
     <% end %>
   </tbody>
@@ -24,5 +31,6 @@
 
 <br>
 
-<%= link_to '席替えする', randam_path %>
-<%= link_to '登録する', new_seat_path %>
+<%= link_to 'Mix now!!', randam_path, class: "btn btn-warning" %>
+<%= link_to 'Registration', new_seat_path, class: "btn btn-default" %>
+</div>

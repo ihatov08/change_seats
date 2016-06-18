@@ -3,6 +3,9 @@ class SeatsController < ApplicationController
 
   # GET /seats
   # GET /seats.json
+  def home
+  end
+
   def index
     @seats = Seat.all
   end

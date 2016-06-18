@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  root 'seats#index'
+  root 'seats#home'
   resources :seats
   get 'randam' => 'seats#randam', as: 'randam'
   # The priority is based upon order of creation: first created -> highest priority.

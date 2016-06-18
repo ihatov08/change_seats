@@ -1,3 +1,52 @@
 // Place all the styles related to the seats controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+.new_seats {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  width: 300px;
+  height: 300px;
+}
+
+.show_seat {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  width: 300px;
+  height: 300px;
+}
+
+.edit_seat {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  width: 300px;
+  height: 300px;
+}
+
+.seats_index {
+    max-width:700px; /* 要素の幅を指定する（固定幅ならwidth:600px;） */
+    margin:0 auto; /* ブロック要素の中央揃え */
+}
+
+.randam_seats {
+    max-width:700px; /* 要素の幅を指定する（固定幅ならwidth:600px;） */
+    margin:0 auto; /* ブロック要素の中央揃え */
+}
+
+.randam_table {
+    max-width:700px; /* 要素の幅を指定する（固定幅ならwidth:600px;） */
+    margin:0 auto; /* ブロック要素の中央揃え */
+}

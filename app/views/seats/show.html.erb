@@ -1,9 +1,14 @@
-<p id="notice"><%= notice %></p>
+<% if flash[:notice] %>
+<div class="alert alert-success">
+<p><%= notice %></p>
+</div>
+<% end %>
 
-<p>
-  <strong>Name:</strong>
-  <%= @seat.name %>
-</p>
-
-<%= link_to 'Edit', edit_seat_path(@seat) %> |
-<%= link_to 'Back', seats_path %>
+<div class="show_seat">
+  <p>
+    <strong>Name:</strong>
+    <%= @seat.name %>
+  </p>
+    <%= link_to 'Edit', edit_seat_path(@seat), class: "btn btn-primary" %> |
+    <%= link_to 'Index page', seats_path, class: "btn btn-default" %>
+</div>
