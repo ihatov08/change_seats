@@ -7,6 +7,10 @@ class SeatsController < ApplicationController
     @seats = Seat.all
   end
 
+  def randam
+    @seats = Seat.order("RANDOM()")
+  end
+
   # GET /seats/1
   # GET /seats/1.json
   def show

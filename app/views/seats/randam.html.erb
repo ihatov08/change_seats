@@ -1,0 +1,11 @@
+<% if @seats.present? %>
+<ol>
+  <% @seats.each do |seat| %>
+  <li><%= seat.name %></li>
+  <% end %>
+</ol>
+<% else %>
+<strong>まだ誰も登録されていません</strong>
+<% end %>
+
+<img src="https://www.evernote.com/l/AKWN-cXyUKRPZbuiz999Of7LcM0TYXpcgnQB/image.png" alt="">
