@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :tasks
   root 'seats#home'
   resources :seats
   get 'randam' => 'seats#randam', as: 'randam'
